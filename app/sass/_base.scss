@@ -17,6 +17,21 @@
 .wrapper:before, .wrapper:after{content: ''; display: table;}
 .wrapper:after {clear: both;}
 .flow-hidden {overflow: hidden}
+
+.mt40 {
+	margin-top: 40px;
+}
+
+.center-x {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+}
+.mt-20 {
+	margin-top: -40px;
+}
+
 html {
 	height: 100%;
 }

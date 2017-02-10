@@ -1,4 +1,6 @@
 $normal: 14px;
+$optima: 'Optima';
+
 
 @mixin respond-to($media) {
 	@if $media == mobile {
@@ -24,12 +26,13 @@ $normal: 14px;
 // $break-large: 1199px;
 // $break-large: 1199px;
 
+$bp1540: "only screen and (max-width : 1540px)";
 $bp-xxx-large:   "only screen and (max-width : 1500px)";
 $bp-xx-large:   "only screen and (min-width : 1400px)";
-$bp-x-large:    "only screen and (min-width : 1201px)";
+$bp-x-large:    "only screen and (min-width : 1200px)";
 $min-s:    "only screen and (min-width : 768px)";
 
-$bp-blarge:      "only screen and (max-width : 1400px)";
+$bp-blarge:      "only screen and (max-width : 1300px)";
 $bp-large:      "only screen and (max-width : 1199px)";
 $bp-medium:     "only screen and (max-width : 991px)";
 $bp-small:      "only screen and (max-width : 767px)";

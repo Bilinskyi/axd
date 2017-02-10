@@ -487,6 +487,23 @@ input[type=search] {
   overflow: hidden;
 }
 
+.mt40 {
+  margin-top: 40px;
+}
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mt-20 {
+  margin-top: -40px;
+}
+
 html {
   height: 100%;
 }
@@ -570,6 +587,17 @@ input.error {
   width: 100%;
 }
 
+.logo-header {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-header__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hide-block {
   z-index: 5;
   text-align: center;
@@ -642,8 +670,6 @@ input.error {
   background: url(../img/bg.png) center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-left: 64px;
-  padding-right: 64px;
   position: relative;
 }
 
@@ -653,15 +679,20 @@ input.error {
   left: 0;
   right: 0;
   width: 100%;
-  padding-left: 64px;
-  padding-right: 64px;
   padding-top: 73px;
   z-index: 6;
 }
 
 .menu {
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  left: 3%;
+  z-index: 6;
+}
+
+@media only screen and (max-width: 1300px) {
+  .menu {
+    left: 10px;
+  }
 }
 
 .menu__button {
@@ -684,12 +715,20 @@ input.error {
   vertical-align: middle;
   margin-left: 30px;
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .lang {
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  right: 3%;
   text-align: right;
+  z-index: 6;
+}
+
+@media only screen and (max-width: 1300px) {
+  .lang {
+    right: 10px;
+  }
 }
 
 .lang__item {
@@ -713,16 +752,37 @@ input.error {
 }
 
 .content {
-  max-width: 1235px !important;
+  position: relative;
+  max-width: 1200px !important;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
-  overflow: auto;
+}
+
+.content_pd {
+  padding-top: 95px;
+  padding-bottom: 50px;
+}
+
+.main-logo {
+  margin-bottom: 65px;
 }
 
 .main-logo__img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.title_line_bb:after, .head_line_bb:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #fff;
 }
 
 .title {
@@ -735,18 +795,7 @@ input.error {
 }
 
 .title_line_bb:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 213px;
-  height: 2px;
-  background-color: #fff;
-}
-
-.news_mt {
-  margin-top: 42px;
 }
 
 .news__pd {
@@ -783,11 +832,18 @@ p {
   width: 100%;
   left: 0;
   right: 0;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 3%;
+  padding-right: 3%;
   padding-bottom: 40px;
   padding-top: 40px;
   z-index: 6;
+}
+
+@media only screen and (max-width: 1300px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .footer__call {
@@ -809,4 +865,83 @@ p {
 
 .footer__item_last {
   margin-left: 34px;
+}
+
+.patch {
+  position: relative;
+  padding-top: 1px;
+}
+
+@media only screen and (max-width: 1540px) {
+  .patch {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.patch .patch__item:last-child {
+  padding-right: 0;
+}
+
+.patch .patch__item:last-child:after {
+  display: none;
+}
+
+.patch .patch__item:last-child a {
+  color: #fff;
+}
+
+.patch .patch__item:first-child {
+  padding-left: 0;
+}
+
+.patch__item {
+  display: inline-block;
+  padding: 0 22px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.patch__item:after {
+  content: '\2014';
+  font-weight: 400;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.42);
+  left: 100%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.patch__item a {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.42);
+  text-decoration: none;
+}
+
+.head {
+  font-size: 48px;
+  color: #fff;
+  position: relative;
+  font-family: "Optima";
+}
+
+.head_line_bb {
+  padding-bottom: 10px;
+}
+
+.head_line_bb:after {
+  width: 309px;
+}
+
+.text-block p {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  text-indent: 30px;
 }
