@@ -1,5 +1,6 @@
 $normal: 14px;
 $optima: 'Optima';
+$helvetica: 'HelveticaNeueCyr-Roman';
 
 
 @mixin respond-to($media) {
@@ -27,13 +28,13 @@ $optima: 'Optima';
 // $break-large: 1199px;
 
 $bp1540: "only screen and (max-width : 1540px)";
-$bp-xxx-large:   "only screen and (max-width : 1500px)";
-$bp-xx-large:   "only screen and (min-width : 1400px)";
-$bp-x-large:    "only screen and (min-width : 1200px)";
-$min-s:    "only screen and (min-width : 768px)";
+// $bp-xxx-large:   "only screen and (max-width : 1500px)";
+// $bp-xx-large:   "only screen and (min-width : 1400px)";
+// $bp-x-large:    "only screen and (min-width : 1201px)";
+// $min-s:    "only screen and (min-width : 768px)";
 
 $bp-blarge:      "only screen and (max-width : 1300px)";
-$bp-large:      "only screen and (max-width : 1199px)";
+$bp-large:      "only screen and (max-width : 1200px)";
 $bp-medium:     "only screen and (max-width : 991px)";
 $bp-small:      "only screen and (max-width : 767px)";
 $bp-smm:      "only screen and (max-width : 550px)";

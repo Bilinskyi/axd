@@ -1,6 +1,15 @@
 
 $(document).ready(function(){
 
+	$('.mh-2').matchHeight({
+		byRow: false,
+	});
+
+
+	$('.list').matchHeight({
+		
+	})
+
 	paddingContent();
 	positionMenu();
 	
@@ -10,7 +19,7 @@ $(document).ready(function(){
 		var header = $('.header').outerHeight();
 		var footer = $('.footer').outerHeight();
 
-		$('.t-cell').css({
+		$('.v-center').css({
 			paddingTop: header,
 			paddingBottom: footer
 		})
@@ -33,6 +42,194 @@ $(document).ready(function(){
 		$(this).closest('.menu').find('.menu__button').toggleClass('menu__button_opened')
 	});
 
+	if ($('.slider-partners').length) {
+		$('.slider-partners').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			centerMode: false,
+			centerPadding: '30px',
+			responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					vertical: true,
+					slidesToScroll: 1
+				}
+			}
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  });
+	}
+
+	if ($('.slider-dev').length) {
+		$('.slider-dev').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			centerMode: false,
+			centerPadding: '30px',
+			responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					vertical: true,
+					slidesToScroll: 1
+				}
+			}
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  });
+	}
+
+
+	if ($('.slider-news').length) {
+		$('.slider-news').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			centerMode: false,
+			centerPadding: '30px',
+			responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  });
+	}
+
+
+
+
+	if ($('.slider-publication').length) {
+		$('.slider-publication').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			centerMode: false,
+			centerPadding: '30px',
+			responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  });
+	}
+
+
+	if ($('.person-about').length) {
+		var fl1 = true;
+		var fl2 = true;
+
+		var flsm1 = true;
+		var flsm2 = true;
+
+		$(window).on('load resize', function() {
+
+			if (window.innerWidth <= 1200) {
+				flsm2 = true;
+				if (flsm1) {
+					flsm1 = false;
+					$('.person-about').append($('.next'));
+				}
+			} else {
+
+				flsm1 = true;
+				if (flsm2) {
+					flsm2 = false; 
+					$('.v-center').append($('.next'));
+				}
+
+			}
+
+			if (window.innerWidth < 992) {
+				fl2 = true;
+				if (fl1) {
+					fl1 = false;
+					if ($('.partners').is('.slick-slider')) {
+						$('.partners').slick('unslick');
+					};
+
+					$('.js-unwrap').unwrap();
+					$('.partners').slick({
+
+						dots: false,
+						infinite: true,
+						speed: 500,
+						cssEase: 'ease'
+					});
+					$('.partners .slick-prev, .partners .slick-next').prepend('<div class="semi-circle"></div>');	
+				}
+
+			} else {
+
+				fl1 = true;
+				if (fl2) {
+					fl2 = false; 
+					if ($('.partners').is('.slick-slider')) {
+						$('.partners').slick('unslick');
+						var n = 0;	
+						for(var i = 0; i<= $('.js-unwrap').length; i+=6) {
+							$('.js-unwrap').slice(i, i+6).wrapAll("<div class='row slider-lg-item'></div>");
+						}
+					}
+
+					$('.partners').slick({
+						dats: false,
+						infinite: true,
+						speed: 500,
+						cssEase: 'ease'
+					});
+					$('.partners .slick-prev, .partners .slick-next').prepend('<div class="semi-circle"></div>');
+				}
+			}
+
+		});
+	}
 
 	$(window).on('resize', function() {
 

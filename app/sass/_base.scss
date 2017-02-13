@@ -1,7 +1,14 @@
-::-webkit-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-::-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-ms-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
+::-webkit-input-placeholder {font-family: 'Open Sans', sans-serif;color: #95989A; font-size: 16px;font-weight: 400;}
+::-moz-placeholder {font-family: 'Open Sans', sans-serif;color: #95989A; font-size: 16px;font-weight: 400;}
+:-moz-placeholder {font-family: 'Open Sans', sans-serif;color: #95989A; font-size: 16px;font-weight: 400;}
+:-ms-input-placeholder {font-family: 'Open Sans', sans-serif;color: #95989A; font-size: 16px;font-weight: 400;}
+@media #{$bp-small} {
+	::-webkit-input-placeholder {font-size: 12px;}
+	::-moz-placeholder {font-size: 12px;}
+	:-moz-placeholder {font-size: 12px;}
+	:-ms-input-placeholder {font-size: 12px;}
+
+}
 
 
 *, *:before, *:after {
@@ -20,6 +27,16 @@
 
 .mt40 {
 	margin-top: 40px;
+	@media #{$bp-small} {
+		margin-top: 15px;
+	}
+}
+.mt25 {
+	margin-top: 25px;
+}
+
+.mt20 {
+	margin-top: 20px;
 }
 
 .center-x {
@@ -30,6 +47,12 @@
 }
 .mt-20 {
 	margin-top: -40px;
+	@media #{$bp-large} {
+		margin-top: -33px;
+	}
+	@media #{$bp-small} {
+		margin-top: -26px;
+	}
 }
 
 html {
@@ -77,4 +100,12 @@ h1,h2,h3,h4,h5,h6, p {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.db {
+	display: block !important;
+}
+
+.overflow {
+	overflow: hidden !important;
 }

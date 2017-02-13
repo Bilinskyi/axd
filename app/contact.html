@@ -44,9 +44,10 @@
 				<li class="lang__item"><a href="">EN</a></li>
 				<li class="lang__item"><a href="">KZ</a></li>
 			</ul>
-			<div class="content visible-xs">
-			<ul class="patch">
-					<li class="patch__item">Главная</li>
+			<div class="content">
+				<ul class="patch">
+					<li class="patch__item"><a href="#">Главная</a></li>
+					<li class="patch__item">Контакты</li>
 				</ul>
 				<div class="center-x mt-20">
 					<a href="#" class="logo-header"><img src="img/logo-header.png" class="logo-header__img" alt="" width="340" height="83"></a>
@@ -54,29 +55,53 @@
 			</div>
 		</header> 
 		<div class="v-center">
-			<div class="content content_pd_sm">
-				<div class="main-logo"><img src="img/Logo.png" alt="" class="main-logo__img"></div>
-				<div class="title title_line_bb">Последние новости</div>
-				<div class="news mt40">
-					<div class="bg-opacity news__pd">
-						<div class="clearfix">
-							<div class="left"><h5>Lorem ipsum dolor sit amet</h5></div>
-							<div class="right"><div class="date">24 декабря 2016</div></div>
-						</div>
-						<p class="pclass">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor velit, vestibulum ut risus at, vestibulum commodo sem. Suspendisse potenti. Proin pellentesque augue a risus interdum, quis suscipit turpis commodo. Aenean tempor metus id eros pretium, vel rhoncus purus egestas. Sed ac lacus pellentesque, varius quam et, lacinia tortor. Vivamus efficitur purus turpis, id tincidunt elit lacinia at. Nulla pharetra faucibus eros a ultricies. Suspendisse a facilisis sapien. Nunc quis venenatis tortor. Pellentesque sit amet augue tristique, convallis nibh at, dapibus mi.
-						</p>
-					</div>
+			<div class="content content_pd">
+				<div class="wrapp-map">
+					<div id="map-canvas"></div>	
 				</div>
-				<div class="news mt40">
-					<div class="bg-opacity news__pd">
-						<div class="clearfix">
-							<div class="left"><h5>Lorem ipsum dolor sit amet</h5></div>
-							<div class="right"><div class="date">24 декабря 2016</div></div>
+				<div class="clearfix">
+					<div class="w50">
+						<table class="table-contact">
+							<tr>
+								<td>Адрес:</td>
+								<td>Екатеринбург,ул. Мамина-Сибиряка, <br>дом 101, офис 683.2, этаж 11</td>
+							</tr>
+							<tr>
+								<td>Телефон:</td>
+								<td>8 (343) 24-24-24</td>
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td>example@example.ru</td>
+							</tr>
+						</table>	
+					</div>
+					<div class="w40">
+						<div class="main-form">
+							<div class="main-form__title">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ:</div>
+							<form action="">
+								<div class="flex-grid-1">
+									<div class="flex-grid-1__col">
+										<input type="text" placeholder="Ваше имя">
+									</div>
+									<div class="flex-grid-1__col">
+										<input type="text" placeholder="Ваше имя">
+									</div>
+									<div class="flex-grid-1__col">
+										<input type="text" placeholder="Ваше имя">
+									</div>
+								</div>
+								<div class="flex-grid-2">
+									<div class="flex-grid-2__col8">
+										<textarea name="" placeholder="Ваше сообщение"></textarea>
+									</div>
+									<div class="flex-grid-2__col4 flex-grid-2__flex-2">
+										<div class="inform">Мы свяжимся с вами в блиайшее время</div>
+										<button type="submit">ОТПРАВИТЬ</button>
+									</div>
+								</div>
+							</form>
 						</div>
-						<p class="pclass">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor velit, vestibulum ut risus at, vestibulum commodo sem. Suspendisse potenti. Proin pellentesque augue a risus interdum, quis suscipit turpis commodo. Aenean tempor metus id eros pretium, vel rhoncus purus egestas. Sed ac lacus pellentesque, varius quam et, lacinia tortor. Vivamus efficitur purus turpis, id tincidunt elit lacinia at. Nulla pharetra faucibus eros a ultricies. Suspendisse a facilisis sapien. Nunc quis venenatis tortor. Pellentesque sit amet augue tristique, convallis nibh at, dapibus mi.
-						</p>
 					</div>
 				</div>
 			</div>
@@ -89,11 +114,12 @@
 			<div class="footer__copyright">(c) Калинин и Партнеры. Все права защищены.</div>
 		</footer>
 	</div>
-	
+
 
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/slick.js"></script>
 	<!-- <script src="js/jquery.bxslider.min.js"></script> -->
 	<!-- <script src="js/owl.carousel.min.js"></script> -->
 	<script src="js/jquery.fancybox.pack.js"></script>
@@ -104,10 +130,7 @@
 	<script src="js/jquery.matchHeight.js"></script>
 	<script src="js/main.js"></script>
 
-<!-- <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-	<script src="js/yandex.js"></script>   -->
-
-<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=true"></script>
-	<script src="js/map_google.js"></script> -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="js/yandex.js"></script>
 </body>
 </html>
