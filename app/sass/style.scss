@@ -309,6 +309,7 @@
 	border: 1px solid rgba(#95989A, .12);
 	&_pd {
 		padding: 25px 0;
+		position: relative;
 		@media #{$bp-large} {
 			padding: 18px 15px;
 		}
@@ -725,15 +726,13 @@ h5 {
 	color: #fff;
 	text-align: center;
 	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	display: table-cell;
+	vertical-align: middle;
 	@media #{$bp-large} {
 		font-size: 20px;
-		line-height: 24px;
 	}
 	@media #{$bp-small} {
 		font-size: 14px;
-		line-height: 17px;
 	}
 }
 
@@ -750,6 +749,10 @@ h5 {
 	padding: 0 15px;
 	width: 33.33%;
 	margin-bottom: 35px;
+	.bg-opacity {
+		display: table;
+		width: 100%;
+	}
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -1422,15 +1425,15 @@ textarea {
 }
 
 .visible-sm {
-	display: none;
+	display: none !important;
 	@media #{$bp-large} {
-		display: block;
+		display: block !important;
 	}
 }
 .visible-xs {
-	display: none;
+	display: none !important;
 	@media #{$bp-small} {
-		display: block;
+		display: block !important;
 	}
 }
 .btn {
